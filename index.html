@@ -20,8 +20,26 @@
 			box-sizing: border-box;
 			-webkit-tap-highlight-color: transparent;
 		}
+		@font-face {
+		font-family: 'Calluna Web';
+		src: url('https://s.anw.red/font/calluna-bold.eot') format('eot'),
+			url('https://s.anw.red/font/calluna-bold.woff2') format('woff2'),
+				url('https://s.anw.red/font/calluna-bold.woff') format('woff');
+		font-weight: 700;
+		font-style: normal;
+		font-display: fallback;
+		}
+		@font-face {
+		font-family: 'Calluna Web';
+		src: url('https://s.anw.red/font/calluna-regular.eot') format('eot'),
+			url('https://s.anw.red/font/calluna-regular.woff2') format('woff2'),
+				url('https://s.anw.red/font/calluna-regular.woff') format('woff');
+		font-weight: 400;
+		font-style: normal;
+		font-display: fallback;
+		}
 		body{
-			font-family:"AR Dabiaosong H","Songti SC", serif;
+			font-family:"Calluna Web","Songti SC", serif;
 			background: #f60c3e;
 			color: #fff;
 		}
@@ -37,8 +55,8 @@
 			transform: translateX(-50%) translateY(-50%);
 		}
 		.quote{
-			font-size: 3em;
-			font-weight: 900;
+			font-size: 4rem;
+			font-weight: 700;
 			text-align: center;
 			line-height: 1.2;
 		}
@@ -58,8 +76,6 @@
 			text-align: right;
 			font-size: 1.5em;
 			font-weight: 400;
-			font-style: italic;
-			font-family: Courier New, cursive;
 			margin: 1em 6%;
 			color: rgba(0, 0, 0, .45);
 		}
@@ -81,7 +97,7 @@
 </head>
 <body>
 <article class="main">
-	<h1 class="quote">哈~哈~哈~哈~哈~哈~哈~哈~ <wbr>Anyway.TV 也被我们拿下了~</h1>
+	<h1 class="quote">哈~哈~哈~哈~哈~哈~哈~哈~ <br>Anyway.TV 也被我们拿下了~</h1>
 	<section class="author">—— JJ Ying & Leon Gao</section>
 </article>
 
@@ -97,8 +113,6 @@ var _hmt = _hmt || [];
   s.parentNode.insertBefore(hm, s);
 })();
 </script>
-
-
 
 
 </body>
