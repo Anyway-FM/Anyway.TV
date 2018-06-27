@@ -1,0 +1,119 @@
+/*Designed by JJ Ying
+http://IconMoon.com*/
+*{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+	outline: none;
+	box-sizing: border-box;
+	-webkit-tap-highlight-color: transparent;
+}
+html {
+	background: #f60c3e;
+}
+/*~Fonts*/
+@font-face {
+	font-family: 'Anyway Type';
+	src: url('https://s.anw.red/font/calluna-sans-regular.woff2') format('woff2'),
+		url('https://s.anw.red/font/calluna-sans-regular.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+	font-display: fallback;
+}
+@font-face {
+	font-family: 'Anyway Type';
+	src: url('https://s.anw.red/font/calluna-sans-bold.woff2') format('woff2'),
+	url('https://s.anw.red/font/calluna-sans-bold.woff') format('woff');
+	font-weight: 700;
+	font-style: normal;
+	font-display: fallback;
+}
+img {
+	image-rendering: -webkit-optimize-contrast;
+}
+/*~Main*/
+body{
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-family: 'Anyway Type', 'Myriad Pro', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+	text-align: left;
+	color: #333;
+	line-height: 1;
+	width: 100vw;
+	height: 100vh;
+}
+a{
+	color: inherit;
+	cursor: pointer;
+	transition: color .15s cubic-bezier(0,.3,.8,1);
+}
+em{
+	font-style: normal;
+}
+::selection{
+	background: #f60c3e;
+	color: #fff;
+}
+main{
+	padding: 4rem;
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: relative;
+  z-index: 1;
+}
+main::before{
+	background: url('tile3.gif');
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: .08;
+	z-index: -1;
+}
+main > .inner{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-wrap: wrap;
+}
+header{
+	flex-basis: 50%;
+	background: url('main-bg.png') no-repeat center center;
+	background-size: cover;
+	height: 100%;
+	padding: 3rem;
+}
+.content{
+	flex-basis: 50%;
+	background: #fff;
+	padding: 3rem 0 3rem 0;
+}
+.content > .inner{
+	border-left: .4rem solid #333;
+	border-left: 1px dotted #ddd;
+	padding: 1rem 3rem;
+	height: 100%;
+	overflow: scroll;
+}
+footer{
+	flex-basis: 100%;
+}
+article{
+	margin-bottom: 3rem;
+}
+.video-wrapper{
+	background: #eee;
+	height: 17rem;
+	width: 100%;
+	margin: 1rem 0;
+}
+.desc{
+	line-height: 1.58;
+	color: #999;
+	font-size: .75rem;
+}
