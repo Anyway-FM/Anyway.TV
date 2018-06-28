@@ -8,51 +8,61 @@
 	<meta name="description" content="设计播客 Anyway.FM 两位主播的 Vlog" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 
-	<link rel="shortcut icon" href="assets/favicon.png" />
+	<!-- <link rel="shortcut icon" href="assets/favicon.png" /> -->
 	<link rel="stylesheet" href="assets/styles.css" />
 
 </head>
 <body>
-	<main>
-		<div class="inner">
+	<div id="wrapper" :class=" playerOpen? 'player-show' : '' ">
+		<main>
+			<div class="inner">
 
-			<header>
-				<!-- <div class="logo">
-					<div class="title">Anyway.TV</div>
-					<div class="tagline">来自<span class="dumb-space"> </span>Anyway.FM<span class="dumb-space"> </span>主播的<span class="dumb-space"> </span>Vlog
-				</div> -->
-			</header>
+				<header>
+					<!-- <div class="logo">
+						<div class="title">Anyway.TV</div>
+						<div class="tagline">来自<span class="dumb-space"> </span>Anyway.FM<span class="dumb-space"> </span>主播的<span class="dumb-space"> </span>Vlog
+					</div> -->
+				</header>
 
-			<section class="content">
-				<div class="inner">
-					<article>
-						<h1>#1：局部，阴有时有雨</h1>
-						<div class="video-wrapper">
-						</div>
-						<div class="desc">
-							第一集啦啦啦啦啦啦啦，啊啊 ui 群殴温柔撒地方撒旦撒打篮球；微软就看到撒地方。第一集啦啦啦啦啦啦啦，啊啊 ui 群殴温柔撒地方撒旦撒打篮球；微软就看到撒地方。
-						</div>
-					</article>
+				<section class="content">
+					<div class="inner">
+						<article>
+							<h1>#1：<a @mouseover="mouseOver('b.gif', 0.8, 'tile')" @mouseleave="mouseLeave()" @click="openPlayer()" href="#">局部，阴有时有雨</a></h1>
+							<div class="video-wrapper">
+							</div>
+							<div class="desc">
+								<a @mouseover="mouseOver('twitter.gif', 0.7, 'tile')" @mouseleave="mouseLeave()" href="#">第一集啦啦啦啦啦啦啦</a>，啊啊 ui 群殴温柔撒地方撒旦撒打篮球；微软就看到撒地方。第一集啦啦啦啦啦啦啦，啊啊 ui 群殴温柔撒地方撒旦撒打篮球；微软就看到撒地方。
+							</div>
+						</article>
 
-					<article>
-						<h1>#0：局部，阴有时有雨</h1>
-						<div class="video-wrapper">
-						</div>
-						<div class="desc">
-							第一集啦啦啦啦啦啦啦，啊啊 ui 群殴温柔撒地方撒旦撒打篮球；微软就看到撒地方。第一集啦啦啦啦啦啦啦，啊啊 ui 群殴温柔撒地方撒旦撒打篮球；微软就看到撒地方。
-						</div>
-					</article>
+						<article>
+							<h1>#0：<a @mouseover="mouseOver('tile3.gif', 0.5, 'tile')" @mouseleave="mouseLeave()" href="#">局部，阴有时有雨</a></h1>
+							<div class="video-wrapper">
+							</div>
+							<div class="desc">
+								第一集啦啦啦啦啦啦啦，啊啊 ui 群殴温柔撒地方撒旦撒打篮球；微软就看到撒地方。第一集啦啦啦啦啦啦啦，啊啊 ui 群殴温柔撒地方撒旦撒打篮球；微软就看到撒地方。
+							</div>
+						</article>
 
-				</div>
-			</section>
+					</div>
+				</section>
 
+			</div>
+			<div class="main-bg" :style="bgStyle"></div>
+		</main>
 
-
+		<div class="player" v-if="playerOpen">
+			<div class="inner">
+				<iframe src="//player.bilibili.com/player.html?aid=25684025&cid=43818048&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+			</div>
 		</div>
-	</main>
-	<!-- <footer >
-		<div class="inner">© 2018 <a href="https://Anyway.FM">Anyway.FM</a> 保留所有权利</a></div>
-	</footer> -->
+
+		<!-- <footer >
+			<div class="inner">© 2018 <a href="https://Anyway.FM">Anyway.FM</a> 保留所有权利</a></div>
+		</footer> -->
+	</div>
+	<script src="assets/vue.js"></script>
+	<script src="assets/main.js"></script>
 
 </body>
 </html>
